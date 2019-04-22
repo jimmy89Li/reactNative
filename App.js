@@ -1,11 +1,16 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button, Alert } from 'react-native';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
+        <Text style={styles.text}>Rainbows and unicorns!</Text>
+        <Button
+          style={styles.button}
+          onPress={() => { Alert.alert('You got a unicorn!!!') }}
+          title="Touch me!"
+        />
       </View>
     );
   }
@@ -14,8 +19,13 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'magenta',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
   },
+  text: {
+    color: 'yellow',
+    fontWeight: 'bold',
+    fontSize: 32
+  }
 });
